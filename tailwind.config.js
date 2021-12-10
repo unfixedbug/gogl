@@ -1,4 +1,6 @@
 module.exports = {
+  // for dark Mode
+  darkMode: 'class',
   content: [
     "./src/**/*.{js,jsx}",
   ],

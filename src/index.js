@@ -1,11 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './global.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+// to link outside
+import { BrowserRouter as Router } from "react-router-dom";
+import "./global.css";
+import App from "./App";
+import { ResultContextProvider } from "./contexts/ResultContextProvider";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <ResultContextProvider>
+    <Router>
+      <App />
+    </Router>
+  </ResultContextProvider>,
+  document.getElementById("root")
 );
