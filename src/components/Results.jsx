@@ -16,7 +16,7 @@ export const Results = () => {
   switch (location.pathname) {
     case "/search":
       return (
-        <div className="flex felx-wrap justify-between space-y-6 sm:px-56">
+        <div className="flex flex-wrap justify-between space-y-6 sm:px-56">
           {results?.results?.map(({ link, title }, index) => (
             <div key={index} className="md:w-2/5 w-full">
               <a href={link} target="_blank" rel="noreferrer">
