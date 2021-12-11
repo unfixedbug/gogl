@@ -1,4 +1,16 @@
-import react from "react";
-import reactDom from "react-dom";
+import React from "react";
+import ReactDOM from "react-dom";
+// to link outside
+import { BrowserRouter as Router } from "react-router-dom";
+import "./global.css";
 import App from "./App";
-ReactDOM.render(<App />, document.getElementById("root"));
+import { ResultContextProvider } from "./contexts/ResultContextProvider";
+
+ReactDOM.render(
+  <ResultContextProvider>
+    <Router>
+      <App />
+    </Router>
+  </ResultContextProvider>,
+  document.getElementById("root")
+);
